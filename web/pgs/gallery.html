@@ -1,0 +1,60 @@
+<h2>
+    Gallery
+</h2>
+<ul class="rslides">
+<img src="../img/catinaccio1.jpg">
+<img src="../img/catinaccio2.jpg" alt="testo" />
+<img src="../img/catinaccio3.jpg" alt="testo" /> 
+</ul>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script src="../js/responsiveslides.min.js"></script>
+<script>
+  $(function() {
+    $(".rslides").responsiveSlides();
+  });
+
+  $(".rslides").responsiveSlides({
+  auto: true,             // Boolean: Animate automatically, true or false
+  speed: 100,            // Integer: Speed of the transition, in milliseconds
+  timeout: 8000,          // Integer: Time between slide transitions, in milliseconds
+  pager: false,           // Boolean: Show pager, true or false
+  nav: false,             // Boolean: Show navigation, true or false
+  random: false,          // Boolean: Randomize the order of the slides, true or false
+  pause: false,           // Boolean: Pause on hover, true or false
+  pauseControls: true,    // Boolean: Pause when hovering controls, true or false
+  prevText: "Previous",   // String: Text for the "previous" button
+  nextText: "Next",       // String: Text for the "next" button
+  maxwidth: "",           // Integer: Max-width of the slideshow, in pixels
+  navContainer: "",       // Selector: Where controls should be appended to, default is after the 'ul'
+  manualControls: "",     // Selector: Declare custom pager navigation
+  namespace: "rslides",   // String: Change the default namespace used
+  before: function(){},   // Function: Before callback
+  after: function(){}     // Function: After callback
+});
+
+
+
+/*
+	var drawList=function(data){
+		//utilizzo i dati forniti con l'array data per compilare l'elenco degli album.
+		for (var i=0;i<data.length;i++){
+			var d = data[i]
+			//creo, mediate jquery, un tag "a", imposto l'attributo href con l'id dell'elemento corrente e al suo interno inserisco il titolo 
+			var a=$('<a>').attr('href','#/album/'+d.id).text(d.title)
+			$('<li>').append(a).appendTo('#albums')
+		}
+		
+	}
+	var pr=function(){
+		//scopo: riportare i titoli dei primi 100 post. 
+		//recupero l'elenco dei post
+		//una volta caricati i post, richiamo la funzione drawList, 
+		//passando implicitamnte come argomento i dati ricevuti		
+		$.ajax({url:a.s+'albums'}).then(drawList) 
+	}
+	
+	//il nostro script dovrà entrare in azione solo a caricamento della pagina avvenuta. Per garantirci che sia così, utilizziamo il notro costrutto $(document).ready(), abbreviato
+	$(pr) 
+	*/
+</script>
